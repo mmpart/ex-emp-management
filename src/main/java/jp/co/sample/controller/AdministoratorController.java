@@ -29,7 +29,7 @@ public class AdministoratorController {
 	/**「 administorator/insert.html」にフォワードする処理*/
 	@RequestMapping("/toInsert")
 	public String toInsert(){
-		return "administorator/insert";
+		return "administorator/insert.html";
 	}
 	
 	
