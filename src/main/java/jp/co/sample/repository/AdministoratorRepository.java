@@ -45,7 +45,7 @@ public class AdministoratorRepository {
 	 * メールアドレスとパスワードから管理者情報を取得する
 	 *  存在しない場合はnullを返す
 	 */
-	public List<Administrator> findByMailAddressAndPassword(String mailAddress, String password) {
+	public Administrator findByMailAddressAndPassword(String mailAddress, String password) {
 		
 		if (mailAddress =  & password = ) {
 			String sql = "SELECT id,name,mail_address,password FROM administrators WHERE mail_address=:mailAddress AND password=:password ORDER BY id";
