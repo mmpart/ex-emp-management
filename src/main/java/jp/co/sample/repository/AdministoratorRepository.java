@@ -46,6 +46,10 @@ public class AdministoratorRepository {
 		String sql = "SELECT id,name,mail_address,password FROM administrators WHERE mail_address=:mailAddress AND password=:password ORDER BY id";
 		SqlParameterSource param = new MapSqlParameterSource().addValue("mailAddress", mailAddress).addValue("password",
 				password);
-		return template.queryForObject(sql, param, ADMINISTORATOR_ROW_MAPPER);
+		try {
+			return template.queryForObject(sql, param, ADMINISTORATOR_ROW_MAPPER);
+		} catch (Exception e) {
+			return null;
+		}
 	}
 }
