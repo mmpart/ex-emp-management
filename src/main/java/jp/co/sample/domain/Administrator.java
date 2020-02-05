@@ -1,6 +1,7 @@
 package jp.co.sample.domain;
 
 /**
+ * 管理者情報を表すドメインクラス.
  * 
  * @author rakus
  *
@@ -8,13 +9,13 @@ package jp.co.sample.domain;
 
 
 public class Administrator {
-	/** id ID */
+	/** ID */
 	private Integer id;
-	/** name 名前 */
+	/** 名前 */
 	private String name;
-	/** mailAddress メールアドレス */
+	/** メールアドレス */
 	private String mailAddress;
-	/** password パスワード */
+	/** パスワード */
 	private String password;
 	
 	public Administrator() {}

@@ -1,5 +1,6 @@
 package jp.co.sample.domain;
 /**
+ * 従業員情報を表すドメインクラス.
  * 
  * @author rakus
  *

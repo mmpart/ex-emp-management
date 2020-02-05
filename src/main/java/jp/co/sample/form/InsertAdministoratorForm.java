@@ -1,6 +1,6 @@
 package jp.co.sample.form;
 /**
- * 
+ * 管理者情報登録時に使用するフォーム.
  * @author rakus
  *
  */

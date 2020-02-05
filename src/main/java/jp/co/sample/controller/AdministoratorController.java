@@ -9,6 +9,7 @@ import jp.co.sample.form.InsertAdministoratorForm;
 import jp.co.sample.service.AdministratorService;
 
 /**
+ * 管理者登録画面を表示する処理を記述するコントローラー.
  * 
  * @author rakus
  *
@@ -20,16 +21,17 @@ public class AdministoratorController {
 	@Autowired
 	private AdministratorService administratorService;
 	
-	/** InsertAdministoratorFormのインスタンス化*/
 	@ModelAttribute
 	public InsertAdministoratorForm setUpInsertAdministoratorForm() {
 		return new InsertAdministoratorForm();
 	}
 	
-	/**「 administorator/insert.html」にフォワードする処理*/
+	/**
+	 * @return 初期画面
+	 * */
 	@RequestMapping("/toInsert")
 	public String toInsert(){
-		return "administorator/insert.html";
+		return "administrator/insert";
 	}
 	
 	
