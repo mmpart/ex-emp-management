@@ -18,6 +18,10 @@ import org.springframework.stereotype.Repository;
 
 import jp.co.sample.domain.Employee;
 
+/**
+ * @author mizuki.tanimori
+ *
+ */
 @Repository
 public class EmployeeRepository {
 	
@@ -43,9 +47,9 @@ public class EmployeeRepository {
 	
 	/**
 	 *  従業員一覧情報を入社日順で取得します.
-	 * 存在しない場合は0件の従業員一覧を返す
 	 * 
-	 * @return 従業員一覧情報
+	 * 
+	 * @return 従業員一覧情報（存在しない場合は0件の従業員一覧を返す）
 	 */
 	public List<Employee> findAll(){
 		String sql = "SELECT id,name,image,gender,hire_date,mail_address,zip_code,address,telephone,salary,characteristics,depandents_count FROM employees ORDER BY hire_date";

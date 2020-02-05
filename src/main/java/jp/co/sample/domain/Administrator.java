@@ -6,8 +6,6 @@ package jp.co.sample.domain;
  * @author rakus
  *
  */
-
-
 public class Administrator {
 	/** ID */
 	private Integer id;

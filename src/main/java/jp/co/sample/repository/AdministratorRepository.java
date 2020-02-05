@@ -1,13 +1,9 @@
 package jp.co.sample.repository;
 
-/**
- * 管理者情報テーブルを操作するリポジトリ.
- * 
- * @author rakus
- *
- */
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -17,6 +13,12 @@ import org.springframework.stereotype.Repository;
 
 import jp.co.sample.domain.Administrator;
 
+/**
+ * 管理者情報テーブルを操作するリポジトリ.
+ * 
+ * @author rakus
+ *
+ */
 @Repository
 public class AdministratorRepository {
 
@@ -35,8 +37,10 @@ public class AdministratorRepository {
 		return administrator;
 	};
 
-	/** 
+	/**
 	 * 管理者情報を挿入します.
+	 * 
+	 * @param administrator 管理者情報
 	 */
 	public void insert(Administrator administrator) {
 		SqlParameterSource param = new BeanPropertySqlParameterSource(administrator);
@@ -46,11 +50,10 @@ public class AdministratorRepository {
 
 	/**
 	 * メールアドレスとパスワードから管理者情報を取得します.
-	 * 存在しない場合はnullを返す
 	 * 
 	 * @param mailAddress メールアドレス
 	 * @param password パスワード
-	 * @return 検索された管理者情報
+	 * @return 検索された管理者情報（ 存在しない場合はnullを返す）
 	 * 
 	 */
 	public Administrator findByMailAddressAndPassword(String mailAddress, String password) {
