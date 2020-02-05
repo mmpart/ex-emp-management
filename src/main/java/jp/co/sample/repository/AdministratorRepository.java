@@ -17,18 +17,21 @@ import org.springframework.stereotype.Repository;
 import jp.co.sample.domain.Administrator;
 
 @Repository
-public class AdministoratorRepository {
+public class AdministratorRepository {
 
 	@Autowired
 	private NamedParameterJdbcTemplate template;
 
+	/**
+	 * Administratorオブジェクトを生成するローマッパー.
+	 */
 	public static final RowMapper<Administrator> ADMINISTORATOR_ROW_MAPPER = (rs, i) -> {
-		Administrator administorator = new Administrator();
-		administorator.setId(rs.getInt("id"));
-		administorator.setName(rs.getString("name"));
-		administorator.setMailAddress(rs.getString("mailAddress"));
-		administorator.setPassword(rs.getString("password"));
-		return administorator;
+		Administrator administrator = new Administrator();
+		administrator.setId(rs.getInt("id"));
+		administrator.setName(rs.getString("name"));
+		administrator.setMailAddress(rs.getString("mailAddress"));
+		administrator.setPassword(rs.getString("password"));
+		return administrator;
 	};
 
 	/** 
@@ -46,6 +49,7 @@ public class AdministoratorRepository {
 	 * 
 	 * @param mailAddress メールアドレス
 	 * @param password パスワード
+	 * @return 検索された管理者情報
 	 * 
 	 */
 	public Administrator findByMailAddressAndPassword(String mailAddress, String password) {

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import jp.co.sample.form.InsertAdministoratorForm;
+import jp.co.sample.form.InsertAdministratorForm;
 import jp.co.sample.service.AdministratorService;
 
 /**
@@ -22,8 +22,8 @@ public class AdministoratorController {
 	private AdministratorService administratorService;
 	
 	@ModelAttribute
-	public InsertAdministoratorForm setUpInsertAdministoratorForm() {
-		return new InsertAdministoratorForm();
+	public InsertAdministratorForm setUpInsertAdministoratorForm() {
+		return new InsertAdministratorForm();
 	}
 	
 	/**

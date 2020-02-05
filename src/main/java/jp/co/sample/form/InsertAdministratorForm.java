@@ -5,7 +5,7 @@ package jp.co.sample.form;
  *
  */
 
-public class InsertAdministoratorForm {
+public class InsertAdministratorForm {
 
 	/** 名前*/
 	private String name;
