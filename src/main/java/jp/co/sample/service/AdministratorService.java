@@ -38,6 +38,7 @@ public class AdministratorService {
 	 * @return 戻ってきた管理者情報をそのまま返す
 	 */
 	public Administrator login(String mailAddress, String password) {
+		System.out.println(mailAddress);
 		return administratorRepository.findByMailAddressAndPassword(mailAddress, password);
 	}
 }

@@ -92,15 +92,14 @@ public class AdministoratorController {
 			@Validated LoginForm form
 		   ,Model model
 		   ) {
-		
 		Administrator administrator = administratorService.login(form.getMailAddress(), form.getPassword());
 		
 		if(administrator == null) {
 			String errormesssage = "メールアドレスまたはパスワードが不正です。";
 			model.addAttribute("errormesssage", errormesssage);
-		} else {
+			return "administrator/login";
+		} 
 			session.setAttribute("administratorName",administrator.getName());
-		}
-		return "forward:/employee/showList";
+			return "forward:/employee/showList";
 	}
 }

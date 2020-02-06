@@ -32,7 +32,7 @@ public class AdministratorRepository {
 		Administrator administrator = new Administrator();
 		administrator.setId(rs.getInt("id"));
 		administrator.setName(rs.getString("name"));
-		administrator.setMailAddress(rs.getString("mailAddress"));
+		administrator.setMailAddress(rs.getString("mail_address"));
 		administrator.setPassword(rs.getString("password"));
 		return administrator;
 	};
@@ -62,6 +62,7 @@ public class AdministratorRepository {
 		try {
 			return template.queryForObject(sql, param, ADMINISTORATOR_ROW_MAPPER);
 		} catch (Exception e) {
+			e.printStackTrace();
 			return null;
 		}
 	}
